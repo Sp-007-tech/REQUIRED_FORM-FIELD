@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
+<!-- Title-->
+    <title> Form Fields Requires! </title>
+    
     <style>
         .error {color:#FF0000;}
     </style>
+    
 </head>
 <body>
+    
     <?php 
     // Define the variables and set to empty values
 
@@ -53,29 +59,28 @@
         $data = htmlspecialchars($data);
         return $data;
     }
-
 ?>
 
     <h2>Form Required Fields !</h2>
     <p><span class="error">* required field</span></p>
 
-    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
     Name: <input type="text" name="name">
-    <span class="error">*<?php echo $nameErr;?></span><br><br>
+    <span class="error">*<?php echo $nameErr;?></span> <br><br>
 
     E-mail: <input type="text" name="email">
-    <span class="error">* <?php echo $emailErr;?></span><br><br>
+    <span class="error">* <?php echo $emailErr;?></span> <br><br>
 
     Website: <input type="text" name="website">
-    <span class="error">* <?php echo $websiteErr;?></span><br><br>
+    <span class="error">* <?php echo $websiteErr;?></span> <br><br>
 
-    Comment: <textarea name="comment" row="4" cols="20"></textarea><br><br>
+    Comment: <textarea name="comment" row="4" cols="20"></textarea> <br><br>
 
     Gender: 
     <input type="radio" name="gender" value="female">Female
     <input type="radio" name="gender" value="male">Male
     <input type="radio" name="gender" vlaue="other">Other
-    <span class="error">* <?php echo $genderErr;?></span><br><br>
+    <span class="error">* <?php echo $genderErr;?></span> <br><br>
 
     <input type="submit" name="submit" value="Submit">
 </form>
